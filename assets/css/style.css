@@ -78,3 +78,22 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+/*footer*/
+footer{
+  margin-top: 5px;
+  background-color: var(--white);
+  color: var(--color);
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  font-family: monospace;
+}
+footer p {
+  color: var(--gray);
+  line-height: 24px;
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 24px;
+  padding: 10px;
+
+}

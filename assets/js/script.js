@@ -1,13 +1,14 @@
+$(document).ready(function(){
 // Display today's day and date
 function dateTime(){
-var todayDate = moment().format('dddd, MMM Do YYYY');
-$("#currentDay").html(todayDate);
-var currentTime = moment().format('LTS');
-$("#currentTime").html(currentTime);
+    var todayDate = moment().format('dddd, MMM Do YYYY');
+    $("#currentDay").html(todayDate);
+    var currentTime = moment().format('LTS');
+    $("#currentTime").html(currentTime);
+    timeTracking()
 }
 setInterval(dateTime, 1000);
 
-$(document).ready(function(){
     //Add click listener to the save button
     $(".saveBtn").on("click", function(){
         // Get the values of the textarea by using JQuery
@@ -15,20 +16,21 @@ $(document).ready(function(){
         var time = $(this).parent().attr("id");
         // Save time and task in local storage
         localStorage.setItem(time, task);
-    }) 
+    });
     function timeTracking(){
         var now = moment().hour();
+        console.log(now);
         if (now > 9){
             $("#time9").addClass("past");
         } else if (now >= 9 && now < 10) {
             $("#time9").addClass("present");
         } else if (now < 9) {
-        $("#time9").addClass("future");
+            $("#time9").addClass("future");
         }
         if (now > 10) {
             $("#time10").addClass("past");
         } else if (now >= 10 && now < 11) {
-            $("time10").addClass("present");
+            $("#time10").addClass("present");
         } else if (now < 10) {
             $("#time10").addClass("future");
         }
@@ -67,21 +69,20 @@ $(document).ready(function(){
         } else if (now < 15) {
             $("#time3").addClass("future");
         }
-        
         if (now > 16) {
             $("#time4").addClass("past");
-          } else if (now >= 16 && now < 17) {
+        } else if (now >= 16 && now < 17) {
             $("#time4").addClass("present");
-          } else if (now < 16) {
+        } else if (now < 16) {
             $("#time4").addClass("future");
-          }
+        }
         if (now > 17) {
             $("#time5").addClass("past");
-          } else if (now >= 17 && now < 18) {
+        } else if (now >= 17 && now < 18) {
             $("#time5").addClass("present");
-          } else if (now < 17) {
+        } else if (now < 17) {
             $("#time5").addClass("future");
-          }
+        }
     }
 
     // Get item from local storage if we have any
