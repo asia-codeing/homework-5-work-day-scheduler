@@ -10,7 +10,7 @@ Work Day Scheduler
 
 # Screenshot to deployed application:
 
-![calendar-app] (./assets/images/c-app.gif)
+![calendar-app](./assets/images/c-app.gif)
 
 
 # Link to deployed application:
